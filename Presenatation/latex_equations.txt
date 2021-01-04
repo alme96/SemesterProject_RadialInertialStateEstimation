@@ -14,5 +14,5 @@ LS_problem:
 A \left( \underline{\theta}, \underline{\psi} \right) \cdot \underline{v}_S = \underline{b}(\underline{v}_r)
 
 vS_cov: 
-\Sigma_{\underline{v}_S}
+\Sigma_{\underline{v}_S} \approx diag(Var[v_{S,x}], Var[v_{S,y}], Var[v_{S,z}])
 
