@@ -1,0 +1,5 @@
+vS_point1: 
+\underline{e}_{r,i} \bullet \underline{v}_S = -v_{r,i}
+
+vS_plc: 
+\left[ \begin{matrix} \underline{e}_{r,1}^T \\ \vdots \\ \underline{e}_{r,i}^T \\ \vdots \\ \underline{e}_{r,N}^T \end{matrix} \right] \cdot \underline{v}_S = \left[ \begin{matrix} -v_{r,1} \\ \vdots \\ -v_{r,i} \\ \vdots \\ -v_{r,N} \end{matrix} \right]
