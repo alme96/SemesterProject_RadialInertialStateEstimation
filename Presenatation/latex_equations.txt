@@ -1,5 +1,18 @@
 vS_point1: 
-\underline{e}_{r,i} \bullet \underline{v}_S = -v_{r,i}
+\underline{e}_{r,i} (\theta_i, \psi_i) \bullet \underline{v}_S = -v_{r,i}
 
 vS_plc: 
-\left[ \begin{matrix} \underline{e}_{r,1}^T \\ \vdots \\ \underline{e}_{r,i}^T \\ \vdots \\ \underline{e}_{r,N}^T \end{matrix} \right] \cdot \underline{v}_S = \left[ \begin{matrix} -v_{r,1} \\ \vdots \\ -v_{r,i} \\ \vdots \\ -v_{r,N} \end{matrix} \right]
+\left[ \begin{matrix} \underline{e}_{r,1}^T (\theta_1, \psi_1) \\ \vdots \\ \underline{e}_{r,i}^T (\theta_i, \psi_i) \\ \vdots \\ \underline{e}_{r,N}^T (\theta_N, \psi_N) \end{matrix} \right] \cdot \underline{v}_S = \left[ \begin{matrix} -v_{r,1} \\ \vdots \\ -v_{r,i} \\ \vdots \\ -v_{r,N} \end{matrix} \right]
+
+meas_var:
+Var[\theta_i]=\frac{\pi}{12 \cdot cos(\theta_i)}, Var[\psi_i] = \frac{\pi}{12 \cdot cos(\psi_i)}, Var[v_{r,i}] = v_{tol} \left( = 0.038 \frac{m}{s} \right)
+
+meas_vec:
+\underline{\theta} = \left[ \theta_1, ... \; , \theta_i, ... \; ,\theta_N \right] ^T, \underline{\psi} = \left[ \psi_1, ... \; , \psi_i, ... \; ,\psi_N \right] ^T, \underline{v}_r = \left[ v_{r,1}, ... \; , v_{r,i}, ... \; ,v_{r_N} \right] ^T
+
+LS_problem:
+A \left( \underline{\theta}, \underline{\psi} \right) \cdot \underline{v}_S = \underline{b}(\underline{v}_r)
+
+vS_cov: 
+\Sigma_{\underline{v}_S}
+
