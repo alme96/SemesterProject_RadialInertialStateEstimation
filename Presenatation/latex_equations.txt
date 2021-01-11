@@ -16,3 +16,14 @@ A \left( \underline{\theta}, \underline{\psi} \right) \cdot \underline{v}_S = \u
 vS_cov: 
 \Sigma_{\underline{v}_S} \approx diag(Var[v_{S,x}], Var[v_{S,y}], Var[v_{S,z}])
 
+Radar_config:
+v_{res} \approx \frac{1}{T_c} \;\;\;\;\;\; v_{max}\approx\frac{1}{T_f} \;\;\;\;\;\; \theta_{res} \approx \frac{1}{cos(\theta)} \;\;\;\;\;\; \theta_{max} = \pm 90^{\circ}
+
+vS_plc <-> LS_problem:
+\left[ \begin{matrix} \underline{e}_{r,1}^T (\theta_1, \psi_1) \\ \vdots \\ \underline{e}_{r,i}^T (\theta_i, \psi_i) \\ \vdots \\ \underline{e}_{r,N}^T (\theta_N, \psi_N) \end{matrix} \right] \cdot \underline{v}_S = \left[ \begin{matrix} -v_{r,1} \\ \vdots \\ -v_{r,i} \\ \vdots \\ -v_{r,N} \end{matrix} \right] \longleftrightarrow A \left( \underline{\theta}, \underline{\psi} \right) \cdot \underline{v}_S = \underline{b}(\underline{v}_r)
+
+wLS_problem:
+A \left( \underline{\theta}, \underline{\psi} \right) ^T \cdot W \left( \underline{\theta}, \underline{\psi} \right) \cdot A \left( \underline{\theta}, \underline{\psi} \right) \cdot \underline{v}_S = A \left( \underline{\theta}, \underline{\psi} \right) ^T \cdot W \left( \underline{\theta}, \underline{\psi} \right) \cdot  \underline{b}(\underline{v}_r) 
+
+Linearisation:
+\Sigma_{v_S} = F^T(\underline{\theta}, \underline{\psi}, \underline{v}_r) \cdot \Sigma_{\underline{\theta}, \underline{\psi}, \underline{v}_r} \cdot F(\underline{\theta}, \underline{\psi}, \underline{v}_r)
